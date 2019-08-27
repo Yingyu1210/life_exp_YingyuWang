@@ -15,3 +15,24 @@ Here, I re-examine the analysis of Oeppen and Vaupel (2002).
 
 # Analysis
 
+# Life Expectancy Analysis 
+
+```{r}
+install.packages("gapminder")
+
+library(gapminder)
+library(tidyverse)
+data("gapminder_unfiltered")
+summary(gapminder_unfiltered)
+library(dplyr)
+
+gapminder_unfiltered %>% 
+  group_by(year) %>% 
+  filter(lifeExp == max(lifeExp)) %>%
+  select(country, lifeExp, year) %>%
+  arrange(year) -> 
+  sundat
+
+```
+
+
