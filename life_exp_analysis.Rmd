@@ -17,6 +17,7 @@ Here, I re-examine the analysis of Oeppen and Vaupel (2002).
 
 # Life Expectancy Analysis 
 
+We will first clean the data.
 ```{r}
 install.packages("gapminder")
 
@@ -34,5 +35,10 @@ gapminder_unfiltered %>%
   sundat
 
 ```
+We will now recreate the plot from Oeppen and Vaupel (2002). 
+
+
+
+
 
 
